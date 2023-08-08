@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>name of the school is {{SDO.scname}} </h1>
+        <h1>principal of the school is {{SDO.scprincipal}}</h1>
+        <h1>location of the school is {{SDO.sclocation}}</h1>
+
+        {% for sto in SDO.jay.all %}
+
+            <h1>student of {{sto.scname}}</h1>
+            <h1>name of the student is {{sto.sname}}</h1>
+            <h1>age of student is {{sto.sage}}</h1>
+            <h1>****************************************************</h1>
+
+        {% endfor %}
+    </center>
+</body>
+</html>
