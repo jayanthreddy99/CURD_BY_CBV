@@ -7,12 +7,14 @@
 </head>
 <body>
     <center>
-        <h1>Lst Of School's </h1>
+        <h1>Create View form </h1>
+        <form method="POST">
+            {% csrf_token %}
+            
+                {{form.as_p}}
 
-        {% for i in allSO %}
-            <a href="{{i.pk}}"><h1>{{i.scname}}</h1></a>
-
-        {% endfor %}
+            <input type="submit" value="create">
+        </form>
     </center>
 </body>
 </html>
